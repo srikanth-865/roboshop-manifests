@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Secret
 metadata:
  name: mysql
- namespace: roboshop
+ namespace: roboshop-sit
  labels:
     project: roboshop
     tier: db
@@ -16,7 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
  name: mysql
- namespace: roboshop
+ namespace: roboshop-sit
  labels:
     project: roboshop
     tier: db
@@ -31,7 +31,7 @@ spec:
  template:
   metadata:
    name: mysql
-   namespace: roboshop
+   namespace: roboshop-sit
    labels:
     project: roboshop
     tier: db
@@ -49,7 +49,7 @@ apiVersion: v1
 kind: Service
 metadata: 
  name: mysql
- namespace: roboshop
+ namespace: roboshop-sit
  labels:
     project: roboshop
     tier: db
